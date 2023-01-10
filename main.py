@@ -1,16 +1,14 @@
-# This is a sample Python script.
+import spider
 
-# Press <no shortcut> to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+class NepremicnineSpider(scrapy.Spider):
+    def parse(self, response):
+        for href in response.css('.oglasi .oglas a::attr(href)'):
+            yield response.follow(href, self.parse_ad)
+
+        for href in response.css('.pagination a::attr(href)'):
+            yield response.follow(href, self.parse)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press F9 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    # https://www.nepremicnine.net/oglasi-prodaja/podravska/maribor/stanovanje/2-sobno,2.5-sobno,3-sobno/
+    ...
