@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "flat_scraper"
+version = "0.1"
+description = "MyGP Marketplace"
+authors = [
+    "Igor Brejc"
+]
+packages = [
+#    { include = "src/django/waga/common" },
+#    { include = "src/django/waga/core" },
+#    { include = "src/django/waga/gp" },
+#    { include = "src/django/waga/marketplace" },
+#    { include = "src/django/waga/settings" },
+#    { include = "src/django/waga/toolbox" },
+#    { include = "src/django/waga/utils" },
+#    { include = "src/django/waga/aws_lambda.py" },
+#    { include = "src/django/waga/context_processors.py" },
+#    { include = "src/django/waga/hosts.py" },
+#    { include = "src/django/waga/init_env.py" },
+#    { include = "src/django/waga/manage.py" },
+#    { include = "src/django/waga/wsgi.py" }
+]
+#
+#[[tool.poetry.source]]
+#name = "waga"
+#url = "https://nexus.waga.cloud/repository/pypi/simple"
+#secondary = true
+
+
+[tool.poetry.dependencies]
+python = "~3.8,<3.9"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
